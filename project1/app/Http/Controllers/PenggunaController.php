@@ -35,7 +35,7 @@ class PenggunaController extends Controller
             'role' => $request->role,
             'password' => Hash::make(substr($request->email, 0, 3) . substr($request->name, 0, 3))
         ]);
-        return redirect()->route('pengguna.index')->with('success', 'Berhasil Menambahkan Akun!');
+        return redirect()->route('pengguna.akun')->with('success', 'Berhasil Menambahkan Akun!');
     }
 
 
